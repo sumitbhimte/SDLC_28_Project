@@ -82,5 +82,3 @@ System design is a solution for “HOW TO” approach to the creation of a new s
 | LR_16 | Function to modify credential password                 | In progress |
 | LR_17 | Function to show all credentials                       | In progress |
 | LR_18 | Function to check if credential exist or not           | In progress |
-| LR_19 | Function to check Format of password                   | In progress |
-| LR_20 | Function to check Format of password                   | In progress |
