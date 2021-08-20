@@ -1,6 +1,6 @@
 # TEST PLAN:
 
-## Table no: High level test plan
+## Table no 1: High level test plan
 
 | **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
@@ -9,7 +9,7 @@
 |  H_03       | Username or Password Not Entered | No Input |Display What is missed|----------------|Boundary based    |
 |  H_04       | Listing all Sorted Users and Passwords as per user command | A choice from the list of choices|List of Users|----------------|Scenario based    |
 
-## Table no: Low level test plan
+## Table no 2: Low level test plan
 
 | **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
