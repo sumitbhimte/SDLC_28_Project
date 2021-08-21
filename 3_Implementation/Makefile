@@ -5,10 +5,10 @@ PROJECT_NAME = TextPad
 BUILD = build
 
 # All source code files
-SRC = 
+SRC = project_main.c\
 
 # All test source files
-TEST_SRC = 
+TEST_SRC = unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
