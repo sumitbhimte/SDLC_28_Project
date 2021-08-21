@@ -112,9 +112,9 @@ bool passwordFormatCheck(const char *password)
     bool IsFormatCorrect = true;
 
     //Passsword length shoud be between 8 and 14
-    if (strlen(password) < 8 || strlen(password) > 14)
+    if (strlen(password) < 8 || strlen(password) > 16)
     {
-        printf("-> %s\n", "Password length is not between 8-14 characters.");
+        printf("-> %s\n", "Password length is not between 8-16 characters.");
         IsFormatCorrect = false;
     }
 
