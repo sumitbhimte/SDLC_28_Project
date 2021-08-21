@@ -15,23 +15,32 @@
 |  H_09       | Credentials file encryption | Commands to encrypt file | Credentials file encrypted | In Progress |Requirement based |
 |  H_10      | Delete a master user | username to delete user| Successfully deleted | In Progress | Scenario based |
 |  H_11      | Search a user | username to search| Search successful & searched user data or Unsuccessful message | In Progress | Scenario based |
-|  H_11      | Search a user | username to search| Search successful & searched user data or Unsuccessful message | In Progress | Scenario based |
+
 
 ## Table no 2: Low level test plan
 | **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_01       |Fuction should check wether a given string contains any special character or not |string|Functions that check strings return Boolean values|---------------- |Requirement based |
-|  L_02       |Function should check wether a given string contains numbers or not |numbers|Functions check the string and return the numbers|----------------|Scenario based    |
-|  L_03       |A function should check wether a given string contain upper case letter or not |upper case letter|function return upper case letter|----------------|Boundary based    |
-|  L_04       |A function should check wether a given string contain lower case letter or not|lower case letter|function return lower case letter|----------------|Requirement based |
-|  L_05       |Function should verify the format of the password| user password|function verify the password|----------------|Requirement based |
-|  L_06       |Function should verify the format of the username| user username|function verify the username|----------------|Requirement based |
-|  L_07       |Test the function which is used to call to create the master user|create user|function create master user|----------------|Requirement based |
-|  L_08       |Test the function which is used to call to delete the master user|delete user|function delete master user|----------------|Requirement based |
-|  L_09       |Test the modify function for master account username|master username|function check the master account username|----------------|Requirement based |
-|  L_10       |Test the modify function for master account password|master password|function check the master account password|----------------|Requirement based |
-|  L_11       |While creating a user,check if the master user already exists or not|  ------------|-------------|----------------|Requirement based |
-|  L_12       |When master user tries to sign in authoenticate master user|  ------------|-------------|----------------|Requirement based |
-|  L_13       |Test for the function used to add new credentials|add new credentials|-------------|----------------|Requirement based |
-|  L_14       |Test for the function used to delete new credentials|delete new credentials|-----------------|----------------|Requirement based |
-|  L_15       |While creating a credential check whether the credential already exists in the system or not and then preceeding|user credentials|value indicating the existence of user credentials|----------------|Requirement based |
+|  L_01       |Fuction should check wether a given string contains any special character or not |string| Boolean value indicating the existence of special characters in a given string| In Progress |Scenario based |
+|  L_02       |Function should check wether a given string contains numbers or not |String input as parameter|Boolean value indicating the existence of numbers in a given string|----------------|Scenario based    |
+|  L_03       |A function should check wether a given string contain upper case letter or not |String input as parameter| Boolean value indicating the existence of upper case letters in a given string |----------------|Boundary based    |
+|  L_04       |A function should check whether a given string contain lower case letter or not|String input as parameter|Boolean value indicating the existence of lower case letters in a given string|----------------|Requirement based |
+|  L_05       |Function should verify the format of the password| String password|Boolean value based on the verification|----------------|Requirement based |
+|  L_06       |Function should verify the format of the username| String username|Boolean value based on the verification|----------------|Requirement based |
+|  L_07       |Test the function which is used to call to create the master user|Username string and Password sting| status SUCCESS or FAILURE |----------------|Requirement based |
+|  L_08       |Test the function which is used to call to delete the master user| current master data|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_09       |Test the modify function for master account username|New username string|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_10       |Test the modify function for master account password|New password String|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_11       |While creating a user,check if the master user already exists or not| master username string |status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_12       |When master user tries to sign in Verify master user|   master username string |Boolean value based on the verification|----------------|Requirement based |
+|  L_13       |Test for the function used  to add new credentials|Strings organization name,username,password|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_14       |Test for the function used to delete new credentials|credentials file|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_15       |Test for the function used to delete new credentials ||Boolean value |----------------|Requirement based |
+|  L_16       |Test for the function used to modify credential username |Strings Username,organization name & new username|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_17       |Test for the function used to modify credential organisation |Strings Username, organization name & neworganization name|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_18       |Test for the function used to modify credential password |Strings organization name & new password|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_19       |Show all credentials  | Credential File|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_20       |Test for the function used to sort given user credentials according to organisation name |Credential File|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_21       |Test for the function used  check if credential exist or not in the system |Strings organization name & username|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_22       |Test for the function used to encrypt credential file | credential file|status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_23       |Test for the function used to decrypt credential file |credential file |status SUCCESS or FAILURE|----------------|Requirement based |
+|  L_24       |Test for the function used to create hash of master account and username |Strings username, organization name & password |status SUCCESS or FAILURE|----------------|Requirement based |
