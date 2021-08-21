@@ -13,7 +13,8 @@
 |  H_07       | All master and user credentials should be encrypted | User & Master Credentials | Encryption Successful | Encryption Successful |Requirement based |
 |  H_08       | All master and user credentials should be decrypted while accessing | Commands to decrypt & show credentials | User & Master Credentials details decrypted | In Progress |Requirement based |
 |  H_09       | Credentials file encryption | Commands to encrypt file | Credentials file encrypted | In Progress |Requirement based |
-|  H_10      | Delete a user | username to delete user| Successfully deleted | In Progress | Scenario based ||  H_11      | Search a user | username to search| Search successful & searched user data or Unsuccessful message | In Progress | Scenario based |
+|  H_10      | Delete a master user | username to delete user| Successfully deleted | In Progress | Scenario based |
+|  H_11      | Search a user | username to search| Search successful & searched user data or Unsuccessful message | In Progress | Scenario based |
 
 ## Table no 2: Low level test plan
 
