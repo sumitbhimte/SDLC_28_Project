@@ -15,6 +15,7 @@
 |  H_09       | Credentials file encryption | Commands to encrypt file | Credentials file encrypted | In Progress |Requirement based |
 |  H_10      | Delete a master user | username to delete user| Successfully deleted | In Progress | Scenario based |
 |  H_11      | Search a user | username to search| Search successful & searched user data or Unsuccessful message | In Progress | Scenario based |
+|  H_11      | Search a user | username to search| Search successful & searched user data or Unsuccessful message | In Progress | Scenario based |
 
 ## Table no 2: Low level test plan
 | **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
