@@ -1,5 +1,14 @@
 /** 
-* @author Ankit Kumar(Ankitdkumar43@gmail.com)
+*  @author Sumit Bhimte
+*  @author Ankit Kumar
+*  @author Anuragh Thakur
+*  @author Chaluvadi Sanjay Sai Naresh
+*  @author Chappdi Harish
+*  @author Edara Raj Kumar
+*  @author Hrituj Uday Wadyalkar
+*  @author Purva Dilip Baniya
+*  @author Spoorti Suresh Naik
+*  @author Sumanth Kubasad
 * @file credetnialFunctions.h
 * @brief Define the API for User Credential management
 *
