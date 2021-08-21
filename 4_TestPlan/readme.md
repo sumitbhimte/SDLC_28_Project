@@ -12,7 +12,7 @@
 ## Table no 2: Low level test plan
 | **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_01       |Fuction should check wether a given string contains any special character or not |string||Functions that check strings return Boolean values |Requirement based |
+|  L_01       |Fuction should check wether a given string contains any special character or not |string||Functions that check strings return Boolean values |---------|Requirement based |
 |  L_02       |Function should check wether a given string contains numbers or not |numbers|Functions check the string and return the numbers|----------------|Scenario based    |
 |  L_03       |A function should check wether a given string contain upper case letter or not |upper case letter|function return upper case letter|----------------|Boundary based    |
 |  L_04       |A function should check wether a given string contain lower case letter or not|lower case letter|function return lower case letter|----------------|Requirement based |
