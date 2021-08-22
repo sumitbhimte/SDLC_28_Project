@@ -1,7 +1,7 @@
 /** 
 *  @author Sumit Bhimte
 *  @author Ankit Kumar
-*  @author Anuragh Thakur
+*  @author Anurag Thakur
 *  @author Chaluvadi Sanjay Sai Naresh
 *  @author Chappdi Harish
 *  @author Edara Raj Kumar
@@ -53,7 +53,7 @@ status addNewCredential(const char *organisationName, const char *username, cons
 * @param[in] string username
 * @return  SUCCESS if credential is successfully deleted otherwise FAILURE
 */
-status deleteCredential(const char organisationName, const char *username);
+status deleteCredential(const char *organisationName, const char *username);
 
 /**
 * @brief To change Organisation name in  credential
@@ -108,5 +108,4 @@ status deleteAllCredentials();
 * @return  true if credential exist in CREDENTIAL_FILE otherwise false
 */
 bool credentialExist(const char *organisationName, const char *username);
-
 #endif
