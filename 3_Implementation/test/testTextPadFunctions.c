@@ -20,7 +20,9 @@ void test_deleteMasterUserAccount(void);
 /********************************
  * Filename -> credentialFunctions.c
 */
-
+void test_addNewCredential(void);
+void test_showAllCredentials(void);
+void test_showAllSortedCredentials(void);
 /* Required by the unity test framework */
 void setUp()
 {
@@ -50,6 +52,9 @@ int main()
   /********************************
  * Filename -> credentialFunctions.c
 */
+  RUN_TEST(test_addNewCredential);
+  RUN_TEST(test_showAllCredentials);
+  RUN_TEST(test_showAllSortedCredentials);
   
   /* Close the Unity Test Framework */
   return UNITY_END();
@@ -79,3 +84,42 @@ void test_deleteMasterUserAccount(void)
   TEST_ASSERT_EQUAL(FAILURE, deleteMasterUserAccount());
 }
 
+/********************************
+ * Filename -> credentialFunctions.c
+*/
+
+void test_addNewCredential(void)
+{
+  TEST_ASSERT_EQUAL(SUCCESS, addNewCredential("facebook", "User1", "Pass123"));
+  TEST_ASSERT_EQUAL(SUCCESS, addNewCredential("twitter", "User2", "Pass123"));
+  TEST_ASSERT_EQUAL(FAILURE, addNewCredential("facebook", "User3", "Pass123"));
+  TEST_ASSERT_EQUAL(NULL_PTR, addNewCredential(NULL, "User4", "Pass123"));
+  TEST_ASSERT_EQUAL(EMPTY_STRING, addNewCredential("", "", "Pass123"));
+  TEST_ASSERT_EQUAL(NULL_PTR, addNewCredential("as", "User5", NULL));
+
+  deleteAllCredentials();
+}
+void test_showAllCredentials(void)
+{
+  addNewCredential("facebook", "User1", "Pass123");
+  addNewCredential("Amcat", "User2", "Pass123");
+  TEST_ASSERT_EQUAL(SUCCESS, showAllCredentials());
+  deleteAllCredentials();
+
+  TEST_ASSERT_EQUAL(FAILURE, showAllCredentials());
+
+  deleteAllCredentials();
+}
+
+void test_showAllSortedCredentials(void)
+{
+  addNewCredential("facebook", "User1", "Pass123");
+  addNewCredential("twitter", "User2", "Pass213");
+  addNewCredential("Amcat", "User3", "Pass312");
+  TEST_ASSERT_EQUAL(SUCCESS, showAllSortedCredentials());
+  deleteAllCredentials();
+
+  TEST_ASSERT_EQUAL(FAILURE, showAllSortedCredentials());
+
+  deleteAllCredentials();
+}
