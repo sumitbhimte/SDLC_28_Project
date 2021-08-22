@@ -189,12 +189,12 @@ static struct block shift_rows(struct block data);
 static struct block inv_shift_rows(struct block data);
 static struct block mix_column(struct block data, int matrix[4][4]);
 
-static void right_shift_row(char *a);
+static void right_shift_row(unsigned char *a);
 static unsigned long file_size(FILE *fp);
 static void swap(unsigned char *a, unsigned char *b);
-static void left_shift_row(char *a);
+static void left_shift_row(unsigned char *a);
 
-status encryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
+status encryptFile(FILE *fp_input, FILE *fp_output, unsigned char *key_s)
 {
     struct block data;
     struct block key = prepare_key(key_s);
@@ -267,7 +267,7 @@ status encryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
     return SUCCESS;
 }
 
-status decryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
+status decryptFile(FILE *fp_input, FILE *fp_output, unsigned char *key_s)
 {
     struct block data;
     struct block key = prepare_key(key_s);
@@ -320,7 +320,7 @@ status decryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
         }
         if (data.b[j][k] != padd_size)
         {
-            return -1;
+            return FAILURE;
         }
         k--;
         c--;
@@ -490,7 +490,7 @@ static struct block shift_rows(struct block data)
     {
         for (j = 0; j < i; j++)
         {
-            left_shift_row((char *)&data.b[i]);
+            left_shift_row((unsigned char *)&data.b[i]);
         }
     }
     return data;
@@ -503,7 +503,7 @@ static struct block inv_shift_rows(struct block data)
     {
         for (j = 0; j < i; j++)
         {
-            right_shift_row((char *)&data.b[i]);
+            right_shift_row((unsigned char *)&data.b[i]);
         }
     }
     return data;
@@ -571,7 +571,7 @@ static void swap(unsigned char *a, unsigned char *b)
     *b = temp;
 }
 
-static void left_shift_row(char *a)
+static void left_shift_row(unsigned char *a)
 {
     int i;
     char c = *a;
@@ -581,7 +581,7 @@ static void left_shift_row(char *a)
     }
 }
 
-static void right_shift_row(char *a)
+static void right_shift_row(unsigned char *a)
 {
     int i;
     //char c=a[3];

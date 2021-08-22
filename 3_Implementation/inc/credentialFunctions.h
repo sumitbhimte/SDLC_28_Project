@@ -117,4 +117,12 @@ status deleteAllCredentials();
 * @return  true if credential exist in CREDENTIAL_FILE otherwise false
 */
 bool credentialExist(const char *organisationName, const char *username);
+
+/**
+* @brief To print all saved credentials 
+* @return  Print all the credentials in sorted order
+*/
+status showAllSortedCredentials();
+
 #endif
+
