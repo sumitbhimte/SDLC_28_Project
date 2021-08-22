@@ -270,6 +270,7 @@ bool verifyMasterUserAccount(const char *username, const char *password)
     fclose(infile);
 
     return false;
+}
 
 bool masterUserAccountExist()
 {
