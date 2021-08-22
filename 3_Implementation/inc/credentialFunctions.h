@@ -98,6 +98,13 @@ status searchCredential(const char *organisationName, const char *username, cred
 status showAllCredentials();
 
 /**
+* @brief To print all saved credentials 
+* @return  Print all the credentials
+*/
+status showAllSortedCredentials();
+
+
+/**
 * @brief To delte all credentials at once
 * @return  SUCCESS if all the credentials are successfully deleted otherwise FAILURE
 */
@@ -118,3 +125,4 @@ bool credentialExist(const char *organisationName, const char *username);
 status showAllSortedCredentials();
 
 #endif
+
