@@ -194,7 +194,7 @@ static unsigned long file_size(FILE *fp);
 static void swap(unsigned char *a, unsigned char *b);
 static void left_shift_row(char *a);
 
-status encryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
+status encryptFile(FILE *fp_input, FILE *fp_output, unsigned char *key_s)
 {
     struct block data;
     struct block key = prepare_key(key_s);
@@ -267,7 +267,7 @@ status encryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
     return SUCCESS;
 }
 
-status decryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
+status decryptFile(FILE *fp_input, FILE *fp_output, unsigned char *key_s)
 {
     struct block data;
     struct block key = prepare_key(key_s);
@@ -320,7 +320,7 @@ status decryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
         }
         if (data.b[j][k] != padd_size)
         {
-            return -1;
+            return FAILURE;
         }
         k--;
         c--;
