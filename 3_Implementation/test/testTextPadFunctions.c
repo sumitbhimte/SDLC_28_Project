@@ -1,3 +1,7 @@
+/*
+ @Author
+*/
+
 #include "unity.h"
 #include "passwordUsernameFormatChecker.h"
 #include "masterAccountFunctions.h"
