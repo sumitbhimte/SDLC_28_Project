@@ -94,3 +94,126 @@ status deleteMasterUserAccount()
     return return_value;
 }
 
+
+status modifyMasterUsername(const char *new_username)
+{
+    masterAccount account; // For master user password and username
+    status return_value;
+    FILE *infile, *outfile;
+    SHA256_CTX sha256;
+
+    if (new_username == NULL)
+    {
+        return NULL_PTR;
+    }
+
+    if (strlen(new_username) == 0)
+    {
+        return EMPTY_STRING;
+    }
+
+    //1. open current Userfile
+    infile = fopen(USER_FILE, "r");
+    if (infile == NULL)
+    {
+        fprintf(stderr, "\nError opening masterUser.dat file\n");
+        return FAILURE;
+    }
+
+    //2. Read the current userfile
+    fread(&account, sizeof(masterAccount), 1, infile);
+    fclose(infile);
+
+    //3. change the username
+
+    sha256_init(&sha256);
+    sha256_update(&sha256, new_username, strlen(new_username));
+    sha256_final(&sha256, account.username);
+
+    // EVP_Digest(new_username, strlen(new_username), account.username, NULL, EVP_sha256(), NULL);
+
+    // 4. open USER_FILE again in write mode to write new password
+    outfile = fopen(USER_FILE, "w");
+    if (outfile == NULL)
+    {
+        fprintf(stderr, "\nError opening masterUser.dat file\n");
+        return FAILURE;
+    }
+
+    // write to USER_FILE
+    fwrite(&account, sizeof(masterAccount), 1, outfile);
+    if (fwrite != 0)
+    {
+        //printf("Account password changed Succefully !\n");
+        return_value = SUCCESS;
+    }
+    else
+    {
+        //printf("error writing masterUser file !\n");
+        return_value = FAILURE;
+    }
+
+    fclose(outfile);
+
+    return return_value;
+}
+status modifyMasterPassword(const char *new_password)
+{
+    masterAccount account; // For master user password and username
+    status return_value;
+    FILE *infile, *outfile;
+    SHA256_CTX sha256;
+
+    if (new_password == NULL)
+    {
+        return NULL_PTR;
+    }
+
+    if (strlen(new_password) == 0)
+    {
+        return EMPTY_STRING;
+    }
+
+    //1. open current Userfile
+    infile = fopen(USER_FILE, "r");
+    if (infile == NULL)
+    {
+        fprintf(stderr, "\nError opening masterUser.dat file\n");
+        return FAILURE;
+    }
+
+    //2. Read the current userfile
+    fread(&account, sizeof(masterAccount), 1, infile);
+    fclose(infile);
+
+    //3. change the password
+    sha256_init(&sha256);
+    sha256_update(&sha256, new_password, strlen(new_password));
+    sha256_final(&sha256, account.password);
+    // EVP_Digest(new_password, strlen(new_password), account.password, NULL, EVP_sha256(), NULL);
+
+    // 4. open USER_FILE again in write mode to write new password
+    outfile = fopen(USER_FILE, "w");
+    if (outfile == NULL)
+    {
+        fprintf(stderr, "\nError opening masterUser.dat file\n");
+        return FAILURE;
+    }
+
+    // write to USER_FILE
+    fwrite(&account, sizeof(masterAccount), 1, outfile);
+    if (fwrite != 0)
+    {
+        //printf("Account password changed Succefully !\n");
+        return_value = SUCCESS;
+    }
+    else
+    {
+        printf("error writing masterUser file !\n");
+        return_value = FAILURE;
+    }
+
+    fclose(outfile);
+
+    return return_value;
+}
