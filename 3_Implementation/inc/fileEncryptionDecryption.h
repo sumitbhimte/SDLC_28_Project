@@ -8,7 +8,7 @@
 /*********************** FUNCTION DECLARATIONS **********************/
 
 /* Key should be strictly of length 16 */
-status encryptFile(FILE *input, FILE *output, char *key);
-status decryptFile(FILE *input, FILE *output, char *key);
+status encryptFile(FILE *input, FILE *output, unsigned char *key);
+status decryptFile(FILE *input, FILE *output, unsigned char *key);
 
 #endif

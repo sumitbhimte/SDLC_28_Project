@@ -192,7 +192,7 @@ static struct block mix_column(struct block data, int matrix[4][4]);
 static void right_shift_row(unsigned char *a);
 static unsigned long file_size(FILE *fp);
 static void swap(unsigned char *a, unsigned char *b);
-static void left_shift_row(char *a);
+static void left_shift_row(unsigned char *a);
 
 status encryptFile(FILE *fp_input, FILE *fp_output, unsigned char *key_s)
 {
@@ -503,7 +503,7 @@ static struct block inv_shift_rows(struct block data)
     {
         for (j = 0; j < i; j++)
         {
-            right_shift_row((char *)&data.b[i]);
+            right_shift_row((unsigned char *)&data.b[i]);
         }
     }
     return data;
@@ -571,7 +571,7 @@ static void swap(unsigned char *a, unsigned char *b)
     *b = temp;
 }
 
-static void left_shift_row(char *a)
+static void left_shift_row(unsigned char *a)
 {
     int i;
     char c = *a;
