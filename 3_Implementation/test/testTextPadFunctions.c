@@ -14,6 +14,8 @@
 /********************************
  * Filename -> masterAccountFunctions.c
 */
+void test_createMasteUserAccount(void);
+void test_deleteMasterUserAccount(void);
 
 /********************************
  * Filename -> credentialFunctions.c
