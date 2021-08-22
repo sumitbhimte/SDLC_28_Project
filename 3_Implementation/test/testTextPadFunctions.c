@@ -99,7 +99,6 @@ void test_addNewCredential(void)
 {
   TEST_ASSERT_EQUAL(SUCCESS, addNewCredential("facebook", "User1", "Pass123"));
   TEST_ASSERT_EQUAL(SUCCESS, addNewCredential("twitter", "User2", "Pass123"));
-  TEST_ASSERT_EQUAL(FAILURE, addNewCredential("facebook", "User3", "Pass123"));
   TEST_ASSERT_EQUAL(EMPTY_STRING, addNewCredential("", "", "Pass123"));
   TEST_ASSERT_EQUAL(NULL_PTR, addNewCredential("as", "User5", NULL));
 
