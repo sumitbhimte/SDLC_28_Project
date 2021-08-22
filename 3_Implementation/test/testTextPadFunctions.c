@@ -20,6 +20,12 @@
 */
 void test_createMasteUserAccount(void);
 void test_deleteMasterUserAccount(void);
+void test_userAccountExist(void);
+void test_verifyMasterUserAccount(void);
+void test_modifyMasterUsername(void);
+void test_modifyMasterPassword(void);
+
+
 
 /********************************
  * Filename -> credentialFunctions.c
@@ -56,6 +62,11 @@ int main()
 */
    RUN_TEST(test_createMasteUserAccount);
   RUN_TEST(test_deleteMasterUserAccount);
+  RUN_TEST(test_userAccountExist);
+  RUN_TEST(test_verifyMasterUserAccount);
+  RUN_TEST(test_modifyMasterUsername);
+  RUN_TEST(test_modifyMasterPassword);
+  
 
   /********************************
  * Filename -> credentialFunctions.c
@@ -86,6 +97,9 @@ void test_createMasteUserAccount(void)
 {
   TEST_ASSERT_EQUAL(SUCCESS, createMasterUserAccount("AnkitKumar", "Ankit123"));
   TEST_ASSERT_EQUAL(NULL_PTR, createMasterUserAccount(NULL, NULL));
+  TEST_ASSERT_EQUAL(EMPTY_STRING,createMasterUserAccount("",""));
+  TEST_ASSERT_EQUAL(SUCCESS, createMasterUserAccount("Anurag", "Anu#12"));
+
 }
 void test_deleteMasterUserAccount(void)
 {
@@ -94,6 +108,60 @@ void test_deleteMasterUserAccount(void)
 
   TEST_ASSERT_EQUAL(FAILURE, deleteMasterUserAccount());
 }
+void test_userAccountExist(void)
+{
+  deleteMasterUserAccount();
+  TEST_ASSERT_EQUAL(false, masterUserAccountExist());
+
+  createMasterUserAccount("AnkitKumar", "Ankit123");
+  TEST_ASSERT_EQUAL(true, masterUserAccountExist());
+}
+void test_verifyMasterUserAccount(void)
+{
+  createMasterUserAccount("AnkitKumar", "Ankit123");
+  TEST_ASSERT_EQUAL(true, verifyMasterUserAccount("AnkitKumar", "Ankit123"));
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("AnshulKumar", "Ankit12334"));
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("AnkitKumar", "Ankit123232312"));
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("AnkitKumar2323", "Ankit123"));
+  TEST_ASSERT_EQUAL(false,verifyMasterUserAccount(NULL,NULL));
+  TEST_ASSERT_EQUAL(false,verifyMasterUserAccount("",""));
+
+  createMasterUserAccount("RandomUSERNMAE@#@$!@#", "RandomPassword@#$#@");
+
+  TEST_ASSERT_EQUAL(true, verifyMasterUserAccount("RandomUSERNMAE@#@$!@#", "RandomPassword@#$#@"));
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("AnshulKumar", "Ankit12334"));
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("AnkitKumar", "Ankit123232312"));
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("AnkitKumar2323", "Ankit123"));
+  TEST_ASSERT_EQUAL(false,verifyMasterUserAccount(NULL,NULL));
+  TEST_ASSERT_EQUAL(false,verifyMasterUserAccount("",""));
+}
+void test_modifyMasterPassword(void)
+{
+  createMasterUserAccount("old_username", "old_password");
+
+  TEST_ASSERT_EQUAL(SUCCESS, modifyMasterPassword("new_password"));
+
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("old_username", "old_password"));
+
+  TEST_ASSERT_EQUAL(true, verifyMasterUserAccount("old_username", "new_password"));
+
+  TEST_ASSERT_EQUAL(NULL_PTR,modifyMasterPassword(NULL));
+  TEST_ASSERT_EQUAL(EMPTY_STRING,modifyMasterPassword(""));
+}
+void test_modifyMasterUsername(void)
+{
+  createMasterUserAccount("old_username", "old_password");
+
+  TEST_ASSERT_EQUAL(SUCCESS, modifyMasterUsername("new_username"));
+
+  TEST_ASSERT_EQUAL(false, verifyMasterUserAccount("old_username", "old_password"));
+
+  TEST_ASSERT_EQUAL(true, verifyMasterUserAccount("new_username", "old_password"));
+
+  TEST_ASSERT_EQUAL(NULL_PTR,modifyMasterUsername(NULL));
+  TEST_ASSERT_EQUAL(EMPTY_STRING,modifyMasterUsername(""));
+}
+
 
 /********************************
  * Filename -> credentialFunctions.c
