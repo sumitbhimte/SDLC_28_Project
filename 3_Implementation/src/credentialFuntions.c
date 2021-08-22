@@ -9,3 +9,134 @@
 #include "credentialFunctions.h"
 
 /*********************** FUNCTION DEFINITIONS ***********************/
+status addNewCredential(const char *organisationName, const char *username, const char *password)
+{
+    FILE *outfile; // to open file for writing
+    credential new_credential, credential;
+
+    //check for NULL pointer
+    if (organisationName == NULL ||
+        username == NULL ||
+        password == NULL)
+        return NULL_PTR;
+
+    if (strlen(organisationName) == 0 ||
+        strlen(username) == 0 ||
+        strlen(password) == 0)
+    {
+        return EMPTY_STRING;
+    }
+
+    // Check if credential file exist or not if not create it
+    if (access(CREDENTIAL_FILE, F_OK) != 0)
+    {
+        outfile = fopen(CREDENTIAL_FILE, "w");
+
+        if (outfile == NULL)
+            return FAILURE;
+
+        fclose(outfile);
+    }
+
+    if (credentialExist(organisationName, username))
+    {
+        printf("%s\n", "Organisation & Username combination already exist");
+        return FAILURE;
+    }
+
+    strcpy(new_credential.organisationName, organisationName);
+    strcpy(new_credential.username, username);
+    strcpy(new_credential.password, password);
+
+    // open CREDENTIAL_FILE to apend the credential
+    outfile = fopen(CREDENTIAL_FILE, "a");
+    if (outfile == NULL)
+        return FAILURE;
+    fwrite(&new_credential, sizeof(credential), 1, outfile);
+    fclose(outfile);
+    return SUCCESS;
+}
+
+
+status showAllCredentials()
+{
+    FILE *credential_file;
+    credential credential;
+
+    //*********open the credential file in read mode***********
+    credential_file = fopen(CREDENTIAL_FILE, "r");
+    if (credential_file == NULL)
+    {
+        printf("%s\n", "Show All Credential - Error opening file");
+        return FAILURE;
+    }
+    
+    //**************Reading the file until EOF and printing credentials*******************
+    int i = 1;
+    printf("%s\n", "********************************************************************************************");
+    while (fread(&credential, sizeof(credential), 1, credential_file))
+    {
+
+        printf("%d) Organisation = %s, Username = %s, Password = %s\n", i,credential.organisationName, credential.username, credential.password);
+        printf("%s\n", "********************************************************************************************");
+        i++;
+    }
+
+    fclose(credential_file);
+    return SUCCESS;
+}
+
+status showAllSortedCredentials()
+{
+    FILE *credential_file;
+    credential credential;
+
+    //*********open the credential file in read mode***********
+    credential_file = fopen(CREDENTIAL_FILE, "r");
+    if (credential_file == NULL)
+    {
+        printf("%s\n", "Show All Credential - Error opening file");
+        return FAILURE;
+    }
+
+    //**************Reading the file until EOF and printing credentials*******************
+    struct Store{
+        char name[12];
+        char user[12];
+        char pass[12];
+    };
+    struct Store arr[10], temp;
+
+    int i = 1;
+    while (fread(&credential, sizeof(credential), 1, credential_file))
+    {
+        strcpy(arr[i].name,credential.organisationName);
+        strcpy(arr[i].user,credential.username);
+        strcpy(arr[i].pass,credential.password);
+        i++;
+    }
+
+    for (int x = 1; x < i; x++)
+    {
+        for (int j = 0; j < i-x; j++)
+        {
+            if (strcmp(arr[j].name, arr[j+1].name) > 0)
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+            
+        }
+    }
+    for (int j = 1; j < i; j++)
+    {
+        printf("OrganisationName = %s", arr[j].name);
+        printf("UserName = %s", arr[j].user);
+        printf("Password = %s", arr[j].pass);
+        printf("=================================================\n");
+    }
+    
+    fclose(credential_file);
+    return SUCCESS;
+}
