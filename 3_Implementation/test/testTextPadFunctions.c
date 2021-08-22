@@ -14,6 +14,8 @@
 /********************************
  * Filename -> masterAccountFunctions.c
 */
+void test_createMasteUserAccount(void);
+void test_deleteMasterUserAccount(void);
 
 /********************************
  * Filename -> credentialFunctions.c
@@ -42,6 +44,8 @@ int main()
   /********************************
  * Filename -> masterAccountFunctions.c
 */
+   RUN_TEST(test_createMasteUserAccount);
+  RUN_TEST(test_deleteMasterUserAccount);
 
   /********************************
  * Filename -> credentialFunctions.c
@@ -56,3 +60,22 @@ int main()
 /********************************
  * Filename -> passwordUsernameFormatChecker.c
 */
+
+/********************************
+
+* Filename -> masterAccountFunctions.c
+*/
+
+void test_createMasteUserAccount(void)
+{
+  TEST_ASSERT_EQUAL(SUCCESS, createMasterUserAccount("AnkitKumar", "Ankit123"));
+  TEST_ASSERT_EQUAL(NULL_PTR, createMasterUserAccount(NULL, NULL));
+}
+void test_deleteMasterUserAccount(void)
+{
+  createMasterUserAccount("Ankit123", "Ankit123");
+  TEST_ASSERT_EQUAL(SUCCESS, deleteMasterUserAccount());
+
+  TEST_ASSERT_EQUAL(FAILURE, deleteMasterUserAccount());
+}
+
