@@ -240,7 +240,7 @@ bool verifyMasterUserAccount(const char *username, const char *password)
 
     if (strlen(username) == 0 || strlen(password) == 0)
     {
-        return EMPTY_STRING;
+        return false;
     }
 
     //1. create hash of username entered by user
