@@ -490,7 +490,7 @@ static struct block shift_rows(struct block data)
     {
         for (j = 0; j < i; j++)
         {
-            left_shift_row((char *)&data.b[i]);
+            left_shift_row((unsigned char *)&data.b[i]);
         }
     }
     return data;
