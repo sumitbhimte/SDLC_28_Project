@@ -6,9 +6,20 @@ BUILD = build
 
 # All source code files
 SRC = project_main.c\
+src/passwordUsernameFormatChecker.c\
+src/masterAccountFunctions.c\
+src/credentialFunctions.c\
+src/sha256.c\
+src/fileEncryptionDecryption.c\
 
 # All test source files
-TEST_SRC = unity/unity.c\
+TEST_SRC = src/passwordUsernameFormatChecker.c\
+src/masterAccountFunctions.c\
+src/credentialFunctions.c\
+test/testTextPadFunctions.c\
+src/sha256.c\
+unity/unity.c\
+src/fileEncryptionDecryption.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
