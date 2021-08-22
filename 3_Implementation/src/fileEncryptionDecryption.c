@@ -189,7 +189,7 @@ static struct block shift_rows(struct block data);
 static struct block inv_shift_rows(struct block data);
 static struct block mix_column(struct block data, int matrix[4][4]);
 
-static void right_shift_row(char *a);
+static void right_shift_row(unsigned char *a);
 static unsigned long file_size(FILE *fp);
 static void swap(unsigned char *a, unsigned char *b);
 static void left_shift_row(char *a);
@@ -581,7 +581,7 @@ static void left_shift_row(char *a)
     }
 }
 
-static void right_shift_row(char *a)
+static void right_shift_row(unsigned char *a)
 {
     int i;
     //char c=a[3];
