@@ -25,6 +25,7 @@ void test_showAllCredentials(void);
 void test_showAllSortedCredentials(void);
 void test_deleteAllCredentials(void);
 void test_deleteCredential(void);
+void test_credentialExist(void);
 
 /* Required by the unity test framework */
 void setUp()
@@ -60,6 +61,7 @@ int main()
   RUN_TEST(test_showAllSortedCredentials);
   RUN_TEST(test_deleteAllCredentials);
   RUN_TEST(test_deleteCredential);
+  RUN_TEST(test_credentialExist);
   
   /* Close the Unity Test Framework */
   return UNITY_END();
@@ -144,4 +146,29 @@ void test_deleteCredential(void)
   TEST_ASSERT_EQUAL(FAILURE,deleteCredential("abcd","Ab"));
   addNewCredential("applock","at","at#123");
   TEST_ASSERT_EQUAL(FAILURE,deleteCredential("ABCD","anurag"));  
+}
+
+void test_credentialExist(void)
+{
+  addNewCredential("twitter", "Ankit", "ankit123");
+  addNewCredential("Random Organisation", "Ankit Kumar", "@nkit123");
+
+  TEST_ASSERT_EQUAL(true, credentialExist("twitter", "Ankit"));
+  TEST_ASSERT_EQUAL(true, credentialExist("Random Organisation", "Ankit Kumar"));
+  TEST_ASSERT_EQUAL(false, credentialExist("twitter", "Ankit Kumar"));
+  TEST_ASSERT_EQUAL(false, credentialExist("DontKnow", "Ankit Kumar"));
+
+  TEST_ASSERT_EQUAL(false, credentialExist(NULL, "Ankit Kumar"));
+  TEST_ASSERT_EQUAL(false, credentialExist("", "Ankit Kumar"));
+  TEST_ASSERT_EQUAL(false, credentialExist("Ankit Kumar", NULL));
+  TEST_ASSERT_EQUAL(false, credentialExist("Ankit Kumar", ""));
+
+  // creeating empty file
+  FILE *test_file = fopen(CREDENTIAL_FILE, "w");
+  fclose(test_file);
+
+  TEST_ASSERT_EQUAL(false, credentialExist("DontKnow", "Ankit Kumar"));
+
+  deleteAllCredentials();
+  TEST_ASSERT_EQUAL(false, credentialExist("DontKnow", "Ankit Kumar"));
 }
