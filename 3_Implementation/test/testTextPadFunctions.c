@@ -144,6 +144,10 @@ void test_deleteCredential(void)
   TEST_ASSERT_EQUAL(FAILURE,deleteCredential("abcd","Ab"));
   addNewCredential("applock","at","at#123");
   TEST_ASSERT_EQUAL(FAILURE,deleteCredential("ABCD","anurag"));  
+  TEST_ASSERT_EQUAL(NULL_PTR,deleteCredential(NULL,NULL));
+  TEST_ASSERT_EQUAL(EMPTY_STRING,deleteCredential("",""));
+  TEST_ASSERT_EQUAL(FAILURE,deleteCredential("APPPPLE","adad"));
+  
 }
 
 void test_credentialExist(void)
