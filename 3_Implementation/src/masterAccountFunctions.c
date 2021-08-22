@@ -1,5 +1,14 @@
 /** 
-* @authors Ankit Anurag Harish Hrituj Purva Raj Sanjay Sumanth Sumit Spoorti 
+* @author Sumit Bhimte
+ @author Ankit Kumar
+ @author Anurag Thakur
+ @author Chaluvadi Sanjay Sai Naresh
+ @author Chappdi Harish
+ @author Edara Raj Kumar
+ @author Hrituj Uday Wadyalkar
+ @author Purva Dilip Baniya
+ @author Spoorti Suresh Naik
+ @author Sumanth Kubasad 
 * @file masterAccountFunctions.c
 * @brief Function definitions for the master account management
 *
