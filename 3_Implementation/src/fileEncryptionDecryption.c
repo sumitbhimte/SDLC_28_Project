@@ -194,30 +194,9 @@ static unsigned long file_size(FILE *fp);
 static void swap(unsigned char *a, unsigned char *b);
 static void left_shift_row(char *a);
 
-const char *increseKeySize(char *key_s) // increase the length of the key to 16
-{
-    int less = 16 - strlen(key_s);
-
-    char *temp = (char *)malloc(less * sizeof(char));
-    for (int i = 0; i < less; i++)
-    {
-        *(temp + i) = 'z';
-    }
-    *(temp + less) = '\0';
-
-    strcat(temp, key_s);
-
-    return temp;
-}
-
 status encryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
 {
     struct block data;
-
-    if (strlen(key_s) < 16)
-    {
-        key_s = increseKeySize(key_s); // key length must be 16
-    }
     struct block key = prepare_key(key_s);
     struct block round_key[11];
     generate_round_keys(key, round_key);
@@ -291,12 +270,6 @@ status encryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
 status decryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
 {
     struct block data;
-
-    if (strlen(key_s) < 16)
-    {
-        key_s = increseKeySize(key_s);
-    }
-
     struct block key = prepare_key(key_s);
     struct block round_key[11];
     generate_round_keys(key, round_key);
@@ -306,6 +279,7 @@ status decryptFile(FILE *fp_input, FILE *fp_output, char *key_s)
     b = size % 16; // Number of bytes left to be fetched into the last block of the file.
     int i;         // Counter of number of complete 4*4 blocks fetchable from file.
     int j, k;
+
     for (i = 0; i < a - 1; i++)
     {
         for (j = 0; j < 4; j++)
