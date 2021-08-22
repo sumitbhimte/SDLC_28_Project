@@ -140,66 +140,6 @@ status showAllSortedCredentials()
     fclose(credential_file);
     return SUCCESS;
 }
-status deleteAllCredentials()
-{
-    // checking of file exist
-    if (access(CREDENTIAL_FILE, F_OK) == 0)
-    {
-        remove(CREDENTIAL_FILE);
-        return SUCCESS;
-        
-    }
-    return FAILURE; // file does not exist
-}
-
-status deleteCredential(const char *organisationName, const char *username)
-{
-    credential credential_to_be_deleted;
-    FILE *file,*temp_file;
-    int counter;
-    file=fopen(CREDENTIAL_FILE,"r");
-    temp_file=fopen("Temp.dat","w");
-
-    //********checking if there is any NULL or size 0 string in the arguments********
-    if (organisationName == NULL ||
-        username == NULL)
-    {
-        return NULL_PTR;
-    }
-    if (strlen(organisationName) == 0 ||
-        strlen(username) == 0)
-    {
-        return EMPTY_STRING;
-    }
-    while (fread(&credential_to_be_deleted, sizeof(credential), 1,file))
-    // ***** reading from file till EOF
-    {
-        if (strcmp(credential_to_be_deleted.organisationName, organisationName) == 0 &&
-            strcmp(credential_to_be_deleted.username, username) == 0)
-        {
-            counter=1;            
-        }
-        else{
-            // ***** writing into new file 
-            fwrite(&credential_to_be_deleted, sizeof(credential_to_be_deleted), 1, temp_file);
-        }
-    }
-    if(counter==0){
-        // If file not found
-        printf("Organisation name not found");
-    }
-    fclose(file);
-    fclose(temp_file);
-    remove(CREDENTIAL_FILE);
-    int result = rename("Temp.dat", CREDENTIAL_FILE);
-    if (result == 0) {
-        printf("The file is renamed successfully.");
-    } else {
-        printf("The file could not be renamed.");
-    }    
-    printf("Deletion is success");
-    return SUCCESS;
-}
 
 bool credentialExist(const char *organisationName, const char *username)
 {
@@ -241,4 +181,64 @@ bool credentialExist(const char *organisationName, const char *username)
     fclose(credential_file);
 
     return false; // NO such credential found
+}
+status deleteAllCredentials()
+{
+    // checking of file exist
+    if (access(CREDENTIAL_FILE, F_OK) == 0)
+    {
+        remove(CREDENTIAL_FILE);
+        return SUCCESS;
+        
+    }
+    return FAILURE; // file does not exist
+}
+status deleteCredential(const char *organisationName, const char *username)
+{
+    credential credential_to_be_deleted;
+    FILE *file,*temp_file;
+    int counter;
+    file=fopen(CREDENTIAL_FILE,"r");
+    temp_file=fopen("Temp.dat","w");
+
+    //********checking if there is any NULL or size 0 string in the arguments********
+    if (organisationName == NULL ||
+        username == NULL)
+    {
+        return NULL_PTR;
+    }
+    if (strlen(organisationName) == 0 ||
+        strlen(username) == 0)
+    {
+        return EMPTY_STRING;
+    }
+    while (fread(&credential_to_be_deleted, sizeof(credential), 1,file))
+    // ***** reading from file till EOF
+    {
+        if (strcmp(credential_to_be_deleted.organisationName, organisationName) == 0 &&
+            strcmp(credential_to_be_deleted.username, username) == 0)
+        {
+            counter=1; 
+            return SUCCESS;           
+        }
+        else{
+            // ***** writing into new file 
+            fwrite(&credential_to_be_deleted, sizeof(credential_to_be_deleted), 1, temp_file);
+            return FAILURE;
+        }
+    }
+    if(counter==0){
+        // If file not found
+        printf("Organisation name not found");
+    }
+    fclose(file);
+    fclose(temp_file);
+    remove(CREDENTIAL_FILE);
+    int result = rename("Temp.dat", CREDENTIAL_FILE);
+    if (result == 0) {
+        printf("The file is renamed successfully.");
+    } else {
+        printf("The file could not be renamed.");
+    }    
+    printf("Deletion is success");
 }
