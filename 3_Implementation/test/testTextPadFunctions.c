@@ -23,6 +23,9 @@ void test_deleteMasterUserAccount(void);
 void test_addNewCredential(void);
 void test_showAllCredentials(void);
 void test_showAllSortedCredentials(void);
+void test_deleteAllCredentials(void);
+void test_deleteCredential(void);
+
 /* Required by the unity test framework */
 void setUp()
 {
@@ -55,6 +58,8 @@ int main()
   RUN_TEST(test_addNewCredential);
   RUN_TEST(test_showAllCredentials);
   RUN_TEST(test_showAllSortedCredentials);
+  RUN_TEST(test_deleteAllCredentials);
+  RUN_TEST(test_deleteCredential);
   
   /* Close the Unity Test Framework */
   return UNITY_END();
@@ -122,4 +127,21 @@ void test_showAllSortedCredentials(void)
   TEST_ASSERT_EQUAL(FAILURE, showAllSortedCredentials());
 
   deleteAllCredentials();
+}
+void test_deleteAllCredentials(void)
+{
+  addNewCredential("facebook", "Ankit", "ankit123");
+  addNewCredential("Apple","Anurag","Anu");
+  addNewCredential("Window","Abcd","Ab");
+  TEST_ASSERT_EQUAL(SUCCESS, deleteAllCredentials());
+  TEST_ASSERT_EQUAL(FAILURE, deleteAllCredentials());
+}
+void test_deleteCredential(void)
+{
+  addNewCredential("Facebook","Ab","Anu");
+  addNewCredential("ABCD","anu","Anu#1234");
+  TEST_ASSERT_EQUAL(SUCCESS,deleteCredential("Facebook","Ab"));
+  TEST_ASSERT_EQUAL(FAILURE,deleteCredential("abcd","Ab"));
+  addNewCredential("applock","at","at#123");
+  TEST_ASSERT_EQUAL(FAILURE,deleteCredential("ABCD","anurag"));  
 }
