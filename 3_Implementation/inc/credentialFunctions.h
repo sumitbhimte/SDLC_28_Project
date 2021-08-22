@@ -27,6 +27,8 @@
 /****************************** MACROS ******************************/
 #define CREDENTIAL_FILE "credentialFile.dat"
 
+#define ENC_DEC_KEY "t!wP9jFaFPhaKTv&"
+
 /**************************** DATA TYPES ****************************/
 typedef struct
 {
