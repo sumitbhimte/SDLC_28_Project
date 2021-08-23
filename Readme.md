@@ -5,10 +5,13 @@ Visit [Pages for Report -optional](using github.io option)
 
 
 
- | Build | Coverage	 | Static Check | Dynamic Analysis | Git Inspector	 | Unit Testing |
- |-----------|-----------|-----------|-----------|-----------|-----------|
- | [![C/C++ CI - Build Status](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml) | [![CI-Coverage](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml) | [![Code Quality - Static Code - Cppcheck](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml) | [![CodeQuality Dynamic Code Analysis Valgrind](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/CodeQuality_Dynamic.yml) | [![Contribution Check - Git Inspector](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gitinspector.yml) | [![Unit Testing - Unity](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/unity.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/unity.yml) |
+ | Build | Coverage	 | Static Check | 
+ |-----------|-----------|-----------|
+ | [![C/C++ CI - Build Status](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml) | [![CI-Coverage](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml) | [![Code Quality - Static Code - Cppcheck](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml) |
 
+ | Dynamic Analysis | Git Inspector	 | Unit Testing |
+ | -----------|-----------|-----------|
+ |  [![CodeQuality Dynamic Code Analysis Valgrind](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/CodeQuality_Dynamic.yml) | [![Contribution Check - Git Inspector](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gitinspector.yml) | [![Unit Testing - Unity](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/unity.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/unity.yml) |
 
 
 
@@ -27,7 +30,7 @@ Visit [Pages for Report -optional](using github.io option)
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
 | `99005633` | Ankit Kumar | TextPad password maneger | Nil            | Nil             | 20            | 20             |
 | `99005699` | Anurag Thakur | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `99005665` | Harish  | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005665` | Harish Chappidi | TextPad password maneger | Nil            | Nil             | 20            | 20             |
 | `99005640` | Spoorti Naik | TextPad password maneger | Nil            | Nil             | 20            | 20             |
 | `99005689` | Purva Baniya | TextPad password maneger | Nil            | Nil             | 20            | 20             |
 | `99005685` | Sumanth Kubasad | TextPad password maneger | Nil            | Nil             | 20            | 20             |
