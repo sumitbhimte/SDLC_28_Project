@@ -37,7 +37,7 @@ Visit [Pages for Report -optional](using github.io option)
 | `` | HritujWadyalkar | testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
 | `` | Raj Kumar Edara | testTextPadFunctions.c, sha256.c | Nil            | Nil             | 20            | 20             |
 | `99005653` | Sanjay Chaluvadi | Main Readme file, sha256.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
-| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
+| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h, testTextPadFunctions.c, Requirements, Data Flow Diagram | Nil            | Nil             | 20            | 20             |
 
 ## Challenges Faced and How Was It Overcome
 
