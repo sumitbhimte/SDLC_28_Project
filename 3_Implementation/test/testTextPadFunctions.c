@@ -13,6 +13,13 @@
 /********************************
  * Filename -> passwordUsernameFormatChecker.c
 */
+void test_containSpecialCharacter(void);
+void test_containNumber(void);
+void test_containLowerCaseLetter(void);
+void test_containUpperCaseLetter(void);
+void test_passwordFormatCheck(void);
+void test_usernameFormatCheck(void);
+
 
 
 /********************************
@@ -56,6 +63,13 @@ int main()
   /********************************
  * Filename -> passwordUsernameFormatChecker.c
  */
+RUN_TEST(test_containSpecialCharacter);
+  RUN_TEST(test_containNumber);
+  RUN_TEST(test_containLowerCaseLetter);
+  RUN_TEST(test_containUpperCaseLetter);
+  RUN_TEST(test_passwordFormatCheck);
+  RUN_TEST(test_usernameFormatCheck);
+
 
   /********************************
  * Filename -> masterAccountFunctions.c
@@ -87,6 +101,66 @@ int main()
 /********************************
  * Filename -> passwordUsernameFormatChecker.c
 */
+void test_containSpecialCharacter(void)
+{
+  TEST_ASSERT_EQUAL(true, containSpecialCharacter("ankit$kumar"));
+  TEST_ASSERT_EQUAL(true, containSpecialCharacter("ankitkumar#"));
+  TEST_ASSERT_EQUAL(true, containSpecialCharacter("@ankit$kumar*"));
+  TEST_ASSERT_EQUAL(false, containSpecialCharacter("ankitkumar"));
+  TEST_ASSERT_EQUAL(false, containSpecialCharacter("ankitkumars d"));
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("####$!@$!$!FSD$#$@!#!@"));
+  TEST_ASSERT_EQUAL(false, containSpecialCharacter("asdfsad"));
+}
+
+void test_containNumber(void)
+{
+  TEST_ASSERT_EQUAL(true, containNumber("ankit23kumar"));
+  TEST_ASSERT_EQUAL(true, containNumber("ankitkumar23"));
+  TEST_ASSERT_EQUAL(true, containNumber("12ankitkumar"));
+  TEST_ASSERT_EQUAL(false, containNumber("ankitkumar"));
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("####$!@$!$!FS23D$#$@!#!@"));
+}
+
+void test_containLowerCaseLetter()
+{
+  TEST_ASSERT_EQUAL(true, containLowerCaseLetter("andaskjds"));
+  TEST_ASSERT_EQUAL(true, containLowerCaseLetter("ANKITUMAr"));
+  TEST_ASSERT_EQUAL(true, containLowerCaseLetter("aNKITKUMAR"));
+  TEST_ASSERT_EQUAL(false, containLowerCaseLetter("ANKITKUMAR"));
+  TEST_ASSERT_EQUAL(false, containLowerCaseLetter("####$!@$!$!$#$@!#!@"));
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("####$!@$!$!FSD$er#$@!#!@"));
+}
+
+void test_containUpperCaseLetter()
+{
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("ANKITKUMAR"));
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("ankitkumaR"));
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("Ankitkumar"));
+  TEST_ASSERT_EQUAL(false, containUpperCaseLetter("ankitkumar"));
+  TEST_ASSERT_EQUAL(false, containUpperCaseLetter("####$!@$!$!$#$@!#!@"));
+  TEST_ASSERT_EQUAL(true, containUpperCaseLetter("####$!@$!$!FSD$#$@!#!@"));
+}
+
+void test_passwordFormatCheck(void)
+{
+  TEST_ASSERT_EQUAL(true, passwordFormatCheck("@nkitKumar123"));
+  TEST_ASSERT_EQUAL(false, passwordFormatCheck("nk"));
+  TEST_ASSERT_EQUAL(false, passwordFormatCheck("asdfasdfsdafasdfasdfaf"));
+  TEST_ASSERT_EQUAL(false, passwordFormatCheck("@nkitKumar"));
+  TEST_ASSERT_EQUAL(false, passwordFormatCheck("ankit$umar123"));
+  TEST_ASSERT_EQUAL(false, passwordFormatCheck("@NKITKUMAR123"));
+}
+
+void test_usernameFormatCheck()
+{
+  TEST_ASSERT_EQUAL(true, usernameFormatCheck("ankit123"));
+  TEST_ASSERT_EQUAL(false, usernameFormatCheck("@nkitKumar123"));
+  TEST_ASSERT_EQUAL(false, usernameFormatCheck("nk"));
+  TEST_ASSERT_EQUAL(false, usernameFormatCheck("asdfasdfsdafasdfasdfaf"));
+  TEST_ASSERT_EQUAL(false, usernameFormatCheck("@nkitKumar"));
+  TEST_ASSERT_EQUAL(false, usernameFormatCheck("ankit$umar123"));
+  TEST_ASSERT_EQUAL(false, usernameFormatCheck("@NKITKUMAR123"));
+}
 
 /********************************
 
