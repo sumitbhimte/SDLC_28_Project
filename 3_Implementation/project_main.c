@@ -156,7 +156,7 @@ int main()
 
                     break;
                 }
-                
+
                 case '4':
                 {
                     char organisation[BUFFER_SIZE];
@@ -256,61 +256,65 @@ int main()
                 }
                 case '5':
                     system(CLEAR);
-                    showAllCredentials();
+                    showAllSortedCredentials();
 
                     break;
                 case '6':
                 {
                     char organisation_name[BUFFER_SIZE];
                     char username[BUFFER_SIZE];
-                    int choice=0;
+                    int choice = 0;
                     credential temp_credential;
                     clean_stdin();
                     system(CLEAR);
                     printf("%s\n", "    Press 1 to delete Organisation detail");
                     printf("%s\n", "    Press 2 to delete all organisations");
                     printf("%s\n", "    Press 3 to return into main menu");
-                    choice=getchar();
-                    if(choice=='1')
+                    choice = getchar();
+                    if (choice == '1')
                     {
                         system(CLEAR);
-                         clean_stdin();
+                        clean_stdin();
                         printf("%s\n", "Enter Organisation Name to search");
                         fgets(organisation_name, BUFFER_SIZE, stdin);
 
                         printf("%s\n", "Enter Username to search");
                         fgets(username, BUFFER_SIZE, stdin);
 
-                    if (deleteCredential(organisation_name, username) == FAILURE)
-                    {
-                        printf("%s\n", "No Such Credential Found");
-                        break;
-                    }
-                    else{
-                        deleteCredential(organisation_name,username);
-                    }
+                        if (deleteCredential(organisation_name, username) == FAILURE)
+                        {
+                            printf("%s\n", "No Such Credential Found");
+                            break;
+                        }
+                        else
+                        {
+                            deleteCredential(organisation_name, username);
+                        }
                     }
 
-                    else if(choice=='2'){
+                    else if (choice == '2')
+                    {
                         system(CLEAR);
-                         if(deleteAllCredentials()==SUCCESS){
-                        printf(" All credentials are deleted");
+                        if (deleteAllCredentials() == SUCCESS)
+                        {
+                            printf(" All credentials are deleted");
                         }
-                        else{
-                        printf("Error in deleting file");
-                            }
+                        else
+                        {
+                            printf("Error in deleting file");
+                        }
                     }
-                    else if(choice=='3'){
+                    else if (choice == '3')
+                    {
                         system(CLEAR);
                         printf("    Exiting from delete credential function");
                         break;
-                        
-                    }  
-                    else{
+                    }
+                    else
+                    {
                         printf("    Wrong choice entered ");
                         break;
-
-                    }               
+                    }
                     break;
                 }
                 case '7':
