@@ -2,20 +2,20 @@
 
 Visit [Pages for Report -optional](using github.io option)
 
-| Build                                                                                                                                                                                     | Code Quality                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Unity                                                                                                                                                                                                 | [Git Inspector](using github.io option)                                                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![C/C++ CI - Build Status](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml) |
-[![CI-Coverage](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml)
-[![Code Quality - Static Code - Cppcheck](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml)
+
+
+
+ | Build | Coverage	 | Static Check | Dynamic Analysis | Git Inspector	 | Unit Testing |
+ |-----------|-----------|-----------|-----------|-----------|-----------|
+ | [![C/C++ CI - Build Status](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/c-cpp.yml) |
+[![CI-Coverage](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gcov.yml) |
+[![Code Quality - Static Code - Cppcheck](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/cppcheck.yml) |
 [![CodeQuality Dynamic Code Analysis Valgrind](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/CodeQuality_Dynamic.yml) |
 [![Contribution Check - Git Inspector](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/gitinspector.yml) |
 [![Unit Testing - Unity](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/unity.yml/badge.svg)](https://github.com/AnkitDhiman2/SDLC_28_Project/actions/workflows/unity.yml) |
 
 
 
-<a href="https://frontend.code-inspector.com/public/user/github/AnkitDhiman2">
-   <img src="https://code-inspector.com/public/badge/user/github/AnkitDhiman2?style=dark" alt="code inspector badge" />
-</a>
 
 ## Folder Structure
 
@@ -30,7 +30,16 @@ Visit [Pages for Report -optional](using github.io option)
 
 | SF No.   | Name        | Features                 | Issuess Raised | Issues Resolved | No Test Cases | Test Case Pass |
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
-| `304283` | Ankit Kumar | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005633` | Ankit Kumar | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005699` | Anurag Thakur | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005665` | Harish  | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005640` | Spoorti Naik | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005689` | Purva Baniya | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005685` | Sumanth Kubasad | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `` | HritujWadyalkar | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `` | Raj Kumar Edara | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005653` | Sanjay Chaluvadi | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005691` | Sumit Bhimte | TextPad password maneger | Nil            | Nil             | 20            | 20             |
 
 ## Challenges Faced and How Was It Overcome
 
