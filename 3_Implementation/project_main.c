@@ -60,7 +60,7 @@ int main()
             {
                 /* code */
 
-                system(CLEAR);
+    
                 printf("%s\n", "        Enter the index for operation to perform");
                 printf("%s\n", "        Enter 1 to change Master Username");
                 printf("%s\n", "        Enter 2 to change Master Password");
