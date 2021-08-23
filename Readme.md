@@ -28,16 +28,16 @@ Visit [Pages for Report -optional](using github.io option)
 
 | SF No.   | Name        | Features                 | Issuess Raised | Issues Resolved | No Test Cases | Test Case Pass |
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
-| `99005633` | Ankit Kumar | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005633` | Ankit Kumar | fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, sha256.c | Nil            | Nil             | 20            | 20             |
 | `99005699` | Anurag Thakur | TextPad password maneger | Nil            | Nil             | 20            | 20             |
 | `99005665` | Harish Chappidi | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `99005640` | Spoorti Naik | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `99005689` | Purva Baniya | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `99005685` | Sumanth Kubasad | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `99005640` | Spoorti Naik | Masterfunction.c | Nil            | Nil             | 20            | 20             |
+| `99005689` | Purva Baniya | Test Plans, passwordUsernameFormatChecker.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
+| `99005685` | Sumanth Kubasad | Test Plans, Main Readme file, testTextPadFunctions.c, credentialFuntions.c, sha256.c | Nil            | Nil             | 20            | 20             |
 | `` | HritujWadyalkar | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `` | Raj Kumar Edara | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `99005653` | Sanjay Chaluvadi | TextPad password maneger | Nil            | Nil             | 20            | 20             |
-| `99005691` | Sumit Bhimte | TextPad password maneger | Nil            | Nil             | 20            | 20             |
+| `` | Raj Kumar Edara | , sha256.c | Nil            | Nil             | 20            | 20             |
+| `99005653` | Sanjay Chaluvadi | Main Readme file, sha256.c | Nil            | Nil             | 20            | 20             |
+| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h | Nil            | Nil             | 20            | 20             |
 
 ## Challenges Faced and How Was It Overcome
 
