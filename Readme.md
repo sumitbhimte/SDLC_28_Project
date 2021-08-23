@@ -28,7 +28,7 @@ Visit [Pages for Report -optional](using github.io option)
 
 | SF No.   | Name        | Features                 | Issuess Raised | Issues Resolved | No Test Cases | Test Case Pass |
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
-| `99005633` | Ankit Kumar | Behavioral diagram, ,fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
+| `99005633` | Ankit Kumar | Behavioral diagram, ,fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, testTextPadFunctions.c | 1            | 1             | 20            | 20             |
 | `99005699` | Anurag Thakur | credential.c, testTextPadFunctions.c, Project_main.c | Nil            | Nil             | 20            | 20             |
 | `99005665` | Harish Chappidi | MasterFunctions.c, testTextPadFunctions.c, Requirements | Nil            | Nil             | 20            | 20             |
 | `99005640` | Spoorti Naik | Masterfunction.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
