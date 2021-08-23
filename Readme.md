@@ -28,16 +28,16 @@ Visit [Pages for Report -optional](using github.io option)
 
 | SF No.   | Name        | Features                 | Issuess Raised | Issues Resolved | No Test Cases | Test Case Pass |
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
-| `99005633` | Ankit Kumar | fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
-| `99005699` | Anurag Thakur | testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
+| `99005633` | Ankit Kumar | Behavioral diagram, ,fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
+| `99005699` | Anurag Thakur | credential.c, testTextPadFunctions.c, Project_main.c | Nil            | Nil             | 20            | 20             |
 | `99005665` | Harish Chappidi | MasterFunctions.c | Nil            | Nil             | 20            | 20             |
 | `99005640` | Spoorti Naik | Masterfunction.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
 | `99005689` | Purva Baniya | Test Plans, passwordUsernameFormatChecker.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
 | `99005685` | Sumanth Kubasad | Test Plans, Main Readme file, testTextPadFunctions.c, credentialFuntions.c | Nil            | Nil             | 20            | 20             |
-| `` | HritujWadyalkar | testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
+| `` | HritujWadyalkar | testTextPadFunctions.c, , Requirements, Data Flow Diagram | Nil            | Nil             | 20            | 20             |
 | `` | Raj Kumar Edara | testTextPadFunctions.c, sha256.c | Nil            | Nil             | 20            | 20             |
 | `99005653` | Sanjay Chaluvadi | Main Readme file, sha256.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
-| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h, testTextPadFunctions.c, Requirements, Data Flow Diagram | Nil            | Nil             | 20            | 20             |
+| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h| Nil            | Nil             | 20            | 20             |
 
 ## Challenges Faced and How Was It Overcome
 
