@@ -41,12 +41,43 @@ Visit [Pages for Report -optional](using github.io option)
 | `99005653` | Sanjay Chaluvadi | Main Readme file, sha256.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
 | `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h| 1            | 1             | 20            | 20             |
 
+
 ## Challenges Faced and How Was It Overcome
 
-1. It was my first experince with procedural language after a long time -> Learnig material helped a lot
-2. Whenever I needed to use GDB I had to create gdb file by mannualy typing the compile command -> solved by creating a debug command in makefile.
-3. Its was difficult to manage the overall project -> solved by finishing and testing one part at a time
-4. Including files -> later resolved
+### Day 1 
+
+#### Challenges Faced - All having different ideas and thoughts. All ideas were unique and intresting which create lots of confusion to select the project.
+
+#### Overcome - At the end of second meeting we finally select the project.
+
+
+### Day 2
+
+#### Challenges Faced - We all want to make the project user friendly and less complex which took lot of time in discussion. 
+
+#### Overcome - Each team member is very active and hard working. So, we easily overcome that challenge.
+
+
+### Day 3
+
+#### Challenges Faced - We all started working on different application. While working on respective code of application face some issues. 
+
+#### Overcome - We all share our problem in team group. So, member who know the solution share with others.
+
+
+### Day 4
+
+#### Challenges Faced - Members of the group added some feautures and updated the Test plan and Contributors list. All the members had connect session with the mentor for the feedback and what changes or improvements need to be done before final submissions.
+
+#### Overcome - After got the feedback from the mentor we start working on it and improvements done before Day 5.
+
+
+### Day 5
+
+#### Challenges Faced - As we almost completed our project the only one thing is pending the working video of our project.
+
+#### Overcome - Day 5 is the final day of our project. All push there code in repo and it is passing all the checks. We also made a working video of our project and have meeting with mentor to show the output our project. 
+
 
 ## How to Run
 
