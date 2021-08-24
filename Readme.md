@@ -1,8 +1,10 @@
-# SDLC Activity Based Learning
+# Introduction 
+A Fully functional password manager which involves operation to save the account credentials, retrive account credentials, generate passwords, delete account credentials.
+This project can be used by anyone in day to day life.
+
+## SDLC Activity Based Learning
 
 Visit [Pages for Report -optional](using github.io option)
-
-
 
 
  | Build | Coverage	 | Static Check | 
@@ -29,7 +31,7 @@ Visit [Pages for Report -optional](using github.io option)
 | SF No.   | Name        | Features                 | Issuess Raised | Issues Resolved | No Test Cases | Test Case Pass |
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
 | `99005633` | Ankit Kumar | Behavioral diagram, ,fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, testTextPadFunctions.c | 2            | 1             | 20            | 20             |
-| `99005699` | Anurag Thakur | credential.c, testTextPadFunctions.c, Project_main.c | Nil            | Nil             | 20            | 20             |
+| `99005699` | Anurag Thakur | credential.c, testTextPadFunctions.c, Project_main.c | Nil            | 1             | 20            | 20             |
 | `99005665` | Harish Chappidi | MasterFunctions.c, testTextPadFunctions.c, Requirements | Nil            | Nil             | 20            | 20             |
 | `99005640` | Spoorti Naik | Masterfunction.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
 | `99005689` | Purva Baniya | Test Plans, passwordUsernameFormatChecker.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
@@ -37,7 +39,7 @@ Visit [Pages for Report -optional](using github.io option)
 | `99005656` | HritujWadyalkar | testTextPadFunctions.c, credentialFuntions.c, Requirements, Data Flow Diagram, Structure Diagram Readme | Nil            | 1             | 20            | 20             |
 | `99005648` | Raj Kumar Edara | testTextPadFunctions.c, sha256.c | Nil            | Nil             | 20            | 20             |
 | `99005653` | Sanjay Chaluvadi | Main Readme file, sha256.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
-| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h| Nil            | Nil             | 20            | 20             |
+| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h| 1            | 1             | 20            | 20             |
 
 ## Challenges Faced and How Was It Overcome
 
