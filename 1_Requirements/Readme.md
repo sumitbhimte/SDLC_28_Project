@@ -59,7 +59,7 @@ System design is a solution for “HOW TO” approach to the creation of a new s
 | HR_02 | User shall be able to create master account with specific username and password format | Completed |
 | HR_03 | User shall be able to manage master Account                                            | Completed |
 | HR_04 | User shall be able to manage user Credentials                                          | Completed |
-| HR_05 | System shall use encryption techniques                                                 | Completed |
+| HR_05 | System shall use encryption techniques                                                 | In Progress |
 
 ## Low level Requirements:
 
@@ -71,15 +71,12 @@ System design is a solution for “HOW TO” approach to the creation of a new s
 | LR_04 | Function to check if string contain lower case letter                  | HR_02 | Completed |
 | LR_05 | Function to check Format of password                                   | HR_02 | Completed |
 | LR_06 | Function to check Format of username                                   | HR_02 | Completed |
-|       |                                                                        |       |             |
 | LR_07 | Function to create master user                                         | HR_03 | Completed |
 | LR_08 | Function to delete master user                                         | HR_03 | Completed |
 | LR_09 | Function to modify master account username                             | HR_03 | Completed |
 | LR_10 | Function to modify master account pasword                              | HR_03 | Completed |
-|       |                                                                        |       |             |
 | LR_11 | Function to check if master account exist                              | HR_01 | Completed |
 | LR_12 | Function to verify master Account                                      | HR_01 | Completed |
-|       |                                                                        |       |             |
 | LR_13 | Function to add new credential                                         | HR_04 | Completed |
 | LR_14 | Function to delete credential                                          | HR_04 | Completed |
 | LR_15 | Function to serach credential                                          | HR_04 | Completed |
@@ -89,7 +86,6 @@ System design is a solution for “HOW TO” approach to the creation of a new s
 | LR_19 | Function to show all credentials                                       | HR_04 | Completed |
 | LR_20 | Function to sort given user credentials according to organisation name | HR_04 | Completed |
 | LR_21 | Function to check if credential exist or not                           | HR_04 | Completed |
-|       |                                                                        |       |             |
 | LR_22 | Function to encrypt credential file                                    | HR_05 | Completed |
 | LR_23 | Function to decrypt credential file                                    | HR_05 | Completed |
 | LR_24 | Function to create hash of master account and username                 | HR_05 | Completed |
