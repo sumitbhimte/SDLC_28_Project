@@ -41,7 +41,7 @@ Build | Code Quality | Unit Testing | [Git Inspector](github.io option) | Code C
 | SF No.   | Name        | Features                 | Issuess Raised | Issues Resolved | No Test Cases | Test Case Pass |
 | -------- | ----------- | ------------------------ | -------------- | --------------- | ------------- | -------------- |
 | `99005633` | Ankit Kumar | Behavioral diagram, ,fileEncryptionDecryption.h, FileEncryptionDecryption.c, credentialFuntions.c, testTextPadFunctions.c | 2            | 1             | 20            | 20             |
-| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h| 1            | 1             | 20            | 20             |
+| `99005691` | Sumit Bhimte | Github Workflows, common.h, credentialFunctions.h, masterAccountFunctions.h, passwordUsernameFormatChecker.h, sha256.h, Makefile| 1            | 1             | 20            | 20             |
 | `99005699` | Anurag Thakur | credential.c, testTextPadFunctions.c, Project_main.c | Nil            | 1             | 20            | 20             |
 | `99005665` | Harish Chappidi | MasterFunctions.c, testTextPadFunctions.c, Requirements | Nil            | Nil             | 20            | 20             |
 | `99005640` | Spoorti Naik | Masterfunction.c, testTextPadFunctions.c | Nil            | Nil             | 20            | 20             |
