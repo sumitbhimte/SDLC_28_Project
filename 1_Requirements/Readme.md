@@ -48,48 +48,44 @@ System design is a solution for “HOW TO” approach to the creation of a new s
 
 | ID    | Description                                     | Status      |
 | ----- | ----------------------------------------------- | ----------- |
-| HR_01 | System shall be able to run on Windows 10/Linux | In progress |
-| HR_02 | System shall be able to on minimum RAM(512MB)   | In progress |
+| HR_01 | System shall be able to run on Windows 10/Linux | Completed   |
+| HR_02 | System shall be able to on minimum RAM(512MB)   | Completed   |
 
 ## High Level Requirements:
 
 | ID    | Description                                                                            | Status      |
 | ----- | -------------------------------------------------------------------------------------- | ----------- |
-| HR_01 | User shall use single master account to access all his credentials                     | In progress |
-| HR_02 | User shall be able to create master account with specific username and password format | In progress |
-| HR_03 | User shall be able to manage master Account                                            | In progress |
-| HR_04 | User shall be able to manage user Credentials                                          | In progress |
-| HR_05 | System shall use encryption techniques                                                 | In progress |
+| HR_01 | User shall use single master account to access all his credentials                     | Completed |
+| HR_02 | User shall be able to create master account with specific username and password format | Completed |
+| HR_03 | User shall be able to manage master Account                                            | Completed |
+| HR_04 | User shall be able to manage user Credentials                                          | Completed |
+| HR_05 | System shall use encryption techniques                                                 | In Progress |
 
 ## Low level Requirements:
 
 | ID    | Description                                                            | Type  | Status      |
 | ----- | ---------------------------------------------------------------------- | ----- | ----------- |
-| LR_01 | Function to check if String contain special characrers                 | HR_02 | In progress |
-| LR_02 | Function to check if string contain numbers                            | HR_02 | In progress |
-| LR_03 | Function to check if string contain upper case letter                  | HR_02 | In progress |
-| LR_04 | Function to check if string contain lower case letter                  | HR_02 | In progress |
-| LR_05 | Function to check Format of password                                   | HR_02 | In progress |
-| LR_06 | Function to check Format of username                                   | HR_02 | In progress |
-|       |                                                                        |       |             |
-| LR_07 | Function to create master user                                         | HR_03 | In progress |
-| LR_08 | Function to delete master user                                         | HR_03 | In progress |
-| LR_09 | Function to modify master account username                             | HR_03 | In progress |
-| LR_10 | Function to modify master account pasword                              | HR_03 | In progress |
-|       |                                                                        |       |             |
-| LR_11 | Function to check if master account exist                              | HR_01 | In progress |
-| LR_12 | Function to verify master Account                                      | HR_01 | In Progress |
-|       |                                                                        |       |             |
-| LR_13 | Function to add new credential                                         | HR_04 | In progress |
-| LR_14 | Function to delete credential                                          | HR_04 | In progress |
-| LR_15 | Function to serach credential                                          | HR_04 | In progress |
-| LR_16 | Function to modify credential username                                 | HR_04 | In progress |
-| LR_17 | Function to modify credential organisation                             | HR_04 | In progress |
-| LR_18 | Function to modify credential password                                 | HR_04 | In progress |
-| LR_19 | Function to show all credentials                                       | HR_04 | In progress |
-| LR_20 | Function to sort given user credentials according to organisation name | HR_04 | In progress |
-| LR_21 | Function to check if credential exist or not                           | HR_04 | In progress |
-|       |                                                                        |       |             |
-| LR_22 | Function to encrypt credential file                                    | HR_05 | In progress |
-| LR_23 | Function to decrypt credential file                                    | HR_05 | In progress |
-| LR_24 | Function to create hash of master account and username                 | HR_05 | In progress |
+| LR_01 | Function to check if String contain special characrers                 | HR_02 | Completed |
+| LR_02 | Function to check if string contain numbers                            | HR_02 | Completed |
+| LR_03 | Function to check if string contain upper case letter                  | HR_02 | Completed |
+| LR_04 | Function to check if string contain lower case letter                  | HR_02 | Completed |
+| LR_05 | Function to check Format of password                                   | HR_02 | Completed |
+| LR_06 | Function to check Format of username                                   | HR_02 | Completed |
+| LR_07 | Function to create master user                                         | HR_03 | Completed |
+| LR_08 | Function to delete master user                                         | HR_03 | Completed |
+| LR_09 | Function to modify master account username                             | HR_03 | Completed |
+| LR_10 | Function to modify master account pasword                              | HR_03 | Completed |
+| LR_11 | Function to check if master account exist                              | HR_01 | Completed |
+| LR_12 | Function to verify master Account                                      | HR_01 | Completed |
+| LR_13 | Function to add new credential                                         | HR_04 | Completed |
+| LR_14 | Function to delete credential                                          | HR_04 | Completed |
+| LR_15 | Function to serach credential                                          | HR_04 | Completed |
+| LR_16 | Function to modify credential username                                 | HR_04 | Completed |
+| LR_17 | Function to modify credential organisation                             | HR_04 | Completed |
+| LR_18 | Function to modify credential password                                 | HR_04 | Completed |
+| LR_19 | Function to show all credentials                                       | HR_04 | Completed |
+| LR_20 | Function to sort given user credentials according to organisation name | HR_04 | Completed |
+| LR_21 | Function to check if credential exist or not                           | HR_04 | Completed |
+| LR_22 | Function to encrypt credential file                                    | HR_05 | Completed |
+| LR_23 | Function to decrypt credential file                                    | HR_05 | Completed |
+| LR_24 | Function to create hash of master account and username                 | HR_05 | Completed |
