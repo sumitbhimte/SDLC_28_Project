@@ -21,3 +21,9 @@
 
 ## Username Check
 ![Username](https://github.com/AnkitDhiman2/SDLC_28_Project/blob/main/2_Design/Low%20Level%20Designs/UML/username%20checker%20(1).png)
+
+## modifyMasterUsername
+![modifyMasterUsername](https://github.com/AnkitDhiman2/SDLC_28_Project/blob/main/2_Design/Low%20Level%20Designs/UML/modifyMasterUsername.png)
+
+## modifyMasterPassword
+![modifyMasterPassword](https://github.com/AnkitDhiman2/SDLC_28_Project/blob/main/2_Design/Low%20Level%20Designs/UML/modifyMasterPassword.png)
