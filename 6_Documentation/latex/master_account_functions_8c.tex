@@ -1,0 +1,93 @@
+\hypertarget{master_account_functions_8c}{}\doxysection{3\+\_\+\+Implementation/src/master\+Account\+Functions.c File Reference}
+\label{master_account_functions_8c}\index{3\_Implementation/src/masterAccountFunctions.c@{3\_Implementation/src/masterAccountFunctions.c}}
+
+
+Function definitions for the master account management.  
+
+
+{\ttfamily \#include \char`\"{}master\+Account\+Functions.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmaster_account}{master\+Account}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+status \mbox{\hyperlink{master_account_functions_8c_a714ceca32cf51c8b49115066b7b8869d}{create\+Master\+User\+Account}} (const char $\ast$username, const char $\ast$password)
+\item 
+status \mbox{\hyperlink{master_account_functions_8c_a4997ddf23efacbd0a9fcba5177a14cd7}{delete\+Master\+User\+Account}} ()
+\item 
+status \mbox{\hyperlink{master_account_functions_8c_aba15685c860fffe0fa7bdaf76e1f84b5}{modify\+Master\+Username}} (const char $\ast$new\+\_\+username)
+\item 
+status \mbox{\hyperlink{master_account_functions_8c_a6bc81862e0bbae02c185b29f4e9d7abd}{modify\+Master\+Password}} (const char $\ast$new\+\_\+password)
+\item 
+bool \mbox{\hyperlink{master_account_functions_8c_a36c47eed8e17eaca4f06f2d39509a7ba}{verify\+Master\+User\+Account}} (const char $\ast$username, const char $\ast$password)
+\item 
+bool \mbox{\hyperlink{master_account_functions_8c_a2b4184c3ea6c1e9d9f80e0e7ac1ec9cf}{master\+User\+Account\+Exist}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Function definitions for the master account management. 
+
+\begin{DoxyAuthor}{Author}
+Sumit Bhimte 
+
+Ankit Kumar 
+
+Anurag Thakur 
+
+Chaluvadi Sanjay Sai Naresh 
+
+Chappdi Harish 
+
+Edara Raj Kumar 
+
+Hrituj Uday Wadyalkar 
+
+Purva Dilip Baniya 
+
+Spoorti Suresh Naik 
+
+Sumanth Kubasad 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{master_account_functions_8c_a714ceca32cf51c8b49115066b7b8869d}\label{master_account_functions_8c_a714ceca32cf51c8b49115066b7b8869d}} 
+\index{masterAccountFunctions.c@{masterAccountFunctions.c}!createMasterUserAccount@{createMasterUserAccount}}
+\index{createMasterUserAccount@{createMasterUserAccount}!masterAccountFunctions.c@{masterAccountFunctions.c}}
+\doxysubsubsection{\texorpdfstring{createMasterUserAccount()}{createMasterUserAccount()}}
+{\footnotesize\ttfamily status create\+Master\+User\+Account (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{master_account_functions_8c_a4997ddf23efacbd0a9fcba5177a14cd7}\label{master_account_functions_8c_a4997ddf23efacbd0a9fcba5177a14cd7}} 
+\index{masterAccountFunctions.c@{masterAccountFunctions.c}!deleteMasterUserAccount@{deleteMasterUserAccount}}
+\index{deleteMasterUserAccount@{deleteMasterUserAccount}!masterAccountFunctions.c@{masterAccountFunctions.c}}
+\doxysubsubsection{\texorpdfstring{deleteMasterUserAccount()}{deleteMasterUserAccount()}}
+{\footnotesize\ttfamily status delete\+Master\+User\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{master_account_functions_8c_a2b4184c3ea6c1e9d9f80e0e7ac1ec9cf}\label{master_account_functions_8c_a2b4184c3ea6c1e9d9f80e0e7ac1ec9cf}} 
+\index{masterAccountFunctions.c@{masterAccountFunctions.c}!masterUserAccountExist@{masterUserAccountExist}}
+\index{masterUserAccountExist@{masterUserAccountExist}!masterAccountFunctions.c@{masterAccountFunctions.c}}
+\doxysubsubsection{\texorpdfstring{masterUserAccountExist()}{masterUserAccountExist()}}
+{\footnotesize\ttfamily bool master\+User\+Account\+Exist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{master_account_functions_8c_a6bc81862e0bbae02c185b29f4e9d7abd}\label{master_account_functions_8c_a6bc81862e0bbae02c185b29f4e9d7abd}} 
+\index{masterAccountFunctions.c@{masterAccountFunctions.c}!modifyMasterPassword@{modifyMasterPassword}}
+\index{modifyMasterPassword@{modifyMasterPassword}!masterAccountFunctions.c@{masterAccountFunctions.c}}
+\doxysubsubsection{\texorpdfstring{modifyMasterPassword()}{modifyMasterPassword()}}
+{\footnotesize\ttfamily status modify\+Master\+Password (\begin{DoxyParamCaption}\item[{const char $\ast$}]{new\+\_\+password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{master_account_functions_8c_aba15685c860fffe0fa7bdaf76e1f84b5}\label{master_account_functions_8c_aba15685c860fffe0fa7bdaf76e1f84b5}} 
+\index{masterAccountFunctions.c@{masterAccountFunctions.c}!modifyMasterUsername@{modifyMasterUsername}}
+\index{modifyMasterUsername@{modifyMasterUsername}!masterAccountFunctions.c@{masterAccountFunctions.c}}
+\doxysubsubsection{\texorpdfstring{modifyMasterUsername()}{modifyMasterUsername()}}
+{\footnotesize\ttfamily status modify\+Master\+Username (\begin{DoxyParamCaption}\item[{const char $\ast$}]{new\+\_\+username }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{master_account_functions_8c_a36c47eed8e17eaca4f06f2d39509a7ba}\label{master_account_functions_8c_a36c47eed8e17eaca4f06f2d39509a7ba}} 
+\index{masterAccountFunctions.c@{masterAccountFunctions.c}!verifyMasterUserAccount@{verifyMasterUserAccount}}
+\index{verifyMasterUserAccount@{verifyMasterUserAccount}!masterAccountFunctions.c@{masterAccountFunctions.c}}
+\doxysubsubsection{\texorpdfstring{verifyMasterUserAccount()}{verifyMasterUserAccount()}}
+{\footnotesize\ttfamily bool verify\+Master\+User\+Account (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password }\end{DoxyParamCaption})}
+
